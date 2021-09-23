@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio - A Ride Control Systems Primer</title>
+		<style type="text/css">
+		/*Internal CSS: had trouble getting external to work*/
+		@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Berkshire+Swash&display=swap');
+			body {
+				/*Changed to something less eccentric*/
+				font-family: 'Roboto Slab', serif;
+				font-size: 90%;
+				color: #666;
+				/*Changed to resemble Phantom's Revenge coaster*/
+				background-color: #66ddaa;}
+			li {
+				list-style-image: url("images/icon-plus.png");
+				line-height: 1.6em;}
+			table {
+				border-spacing: 0px;}
+			th, td {
+				padding: 5px 30px 5px 10px;
+				border-spacing: 0px;
+				font-size: 90%;
+				margin: 0px;}
+			th, td {
+				text-align: left;
+				background-color: #e0e9f0;
+				border-top: 1px solid #f1f8fe;
+				border-bottom: 1px solid #cbd2d8;
+				border-right: 1px solid #cbd2d8;}
+			tr.head th {
+				color: #fff;
+				background-color: #90b4d6;
+				border-bottom: 2px solid #547ca0;
+				border-right: 1px solid #749abe;
+				border-top: 1px solid #90b4d6;
+				text-align: center;
+				text-shadow: -1px -1px 1px #666666;
+				letter-spacing: 0.15em;}
+			td {
+				text-shadow: 1px 1px 1px #ffffff;}
+			tr.even td, tr.even th {
+				background-color: #e8eff5;}
+			tr.head th:first-child {
+				-webkit-border-top-left-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				border-top-left-radius: 5px;}
+			tr.head th:last-child {
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topright: 5px;
+				border-top-right-radius: 5px;}
+			fieldset {
+				width: 310px;
+				margin-top: 20px;
+				border: 1px solid #d6d6d6;
+				background-color: #ffffff;
+				line-height: 1.6em;}
+			legend {
+				font-style: italic;
+				color: #666666;}
+			input[type="text"] {
+				width: 120px;
+				border: 1px solid #d6d6d6;
+				padding: 2px;
+				outline: none;}
+			input[type="text"]:focus,
+			input[type="text"]:hover {
+				background-color: #d0e2f0;
+				border: 1px solid #999999;}
+			input[type="submit"] {
+				border: 1px solid #006633;
+				background-color: #009966;
+				color: #ffffff;
+				border-radius: 5px;
+				padding: 5px;
+				margin-top: 10px;}
+			input[type="submit"]:hover {
+				border: 1px solid #006633;
+				background-color: #00CC33;
+				color: #ffffff;
+				cursor: pointer;}
+			.title {
+				float: left;
+				width: 160px;
+				clear: left;}
+			.submit {
+				width: 310px;
+				text-align: right;}
+			
+			#page {
+				max-width: 940px;
+				min-width: 720px;
+				margin: 10px auto 10px auto;
+				
+				border: 4px  #000;
+				background-color: #f6f4e8;
+				vertical-align: baseline;}
+
+			.center-mid-1{
+				width: 940px;
+				/*Changed to resemble Phantom's Revenge coaster*/
+				background-color: #9932cc;
+				padding-bottom: 15px;
+				padding-top: 5px;}
+
+			.center-mid-2{
+				width: 940px;
+				background-color: #efeae6;
+				padding-bottom: 15px;
+				padding-top: 5px;}
+			
+			/*Added to control position & size of company logo*/
+			.center-mid-2 > img {
+				float: left;
+				margin: 15px;
+				width: 250px;}
+
+			.center-mid-3{
+				width: 940px;
+				background-color: #dee1e5;
+				padding-bottom: 15px;
+				padding-top: 5px;}
+
+			.center-2{
+				width: 940px;
+				margin: auto;
+				padding-bottom: 15px;
+				padding-top: 5px;}
+			
+			.center-3{
+				width: 300px;
+				margin: 0 0;}
+
+			.img-1{
+				margin: auto;
+				width: 100%;}
+			.img-2{
+				margin: auto;
+				width: 30%;}
+			.center-text {
+				text-align: center;}
+			.center-2 > p {
+				text-align: left;
+				padding: 15px;}
+
+			.center-2 a {
+				text-decoration: none;
+				color: #efeae6;
+				background-color: #66ddaa;}
+
+			.center-2 a:hover {
+				background-color: #9932cc;}
+			
+			h1.center-text {
+				/*Inherit body font family*/
+				/* Decreased h1 font size from 550%*/
+				font-size: 400%;
+				/*Changed to resemble Phantom's Revenge coaster*/
+				background-color: #9932cc;
+				/*Added white text color*/
+				color: #efeae6;}
+			
+			.header-main-menu {
+				float: right;
+				max-width: 80%;
+				position: fixed;
+				text-align: center;
+				height: 100%;
+				background-color: #ffffff;
+				right: -100%;
+				top: 0;
+				transition: right .3s ease;
+				width: 100%;
+				overflow: auto;
+				max-width: 100%;
+				z-index: 99;} 
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;}
+
+			ul li {
+				display: inline;
+				padding: 10px;
+				float: right;}
+
+   			ul li a, 
+   			ul a :hover, 
+		    ul li a:focus, 
+		    ul li a:active {
+				border: none;
+				text-decoration: none;
+				color: inherit;}
+
+			.footer {
+				text-align: center;}
+
+			.smlogo {
+				height: 30px;
+				width: 30px;
+				margin: auto;}
+
+		</style>
+		
+	</head>
+	<body>
+		<div id="page">
+			<div class="menu-holder">
+			<!--Navigation Menu-->
+                <nav id="header-main-menu">
+                    <ul class="main-menu ">
+                        <li>
+							<a href="index.html"> Home </a>
+						</li>
+						<li>
+							<!--Changed to link to schedule.html-->
+							<a href="schedule.html"> Portfolio </a>
+						</li>
+						<li>
+							<!--Informative Page-->
+							<a href="primer.html"> Primer </a>
+						</li>
+						<li>
+							<!--Changed to link to contact.html-->
+							<a href="contact.html"> Contact </a>
+						</li>
+					</ul>
+                </nav>
+            </div>
+
+         	<br/>
+
+			<!--Overall title of page-->
+			<h1 class= "center-text"> Portfolio of Rides </h1>
+	
+			<div class = "center-mid-2">
+
+				<!--Add image floating to left of text-->
+				<img src="img/IOE.png" alt="" title="">
+
+				<div class ="center-2">
+				<!--Page Body-->
+					<p>
+					<!--Table Introduction-->
+						<a href="https://www.irvineondrey.com/" target="_blank">
+							Irvine Ondrey Engineering
+						</a>
+						is a small company based in Ann Arbor, Michigan that specializes in the development
+						of electrical control systems for roller coasters and amusement attractions.  Brian 
+						Ondrey, an alum of Carnegie Mellon Electrical & Computer Engineering, is the president
+						and lead engineer for the company.  His experience in the attractions industry dates 
+						back to 1998.  As an engineering intern, Donovan was able to work and study under Brian
+						and his talened engineering team in the completion of a diverse set of projects.   
+					</p>
+
+					<table class ="center-2">
+					<!--Project Portfolio Table-->
+					<!--Slightly different color for every other row-->
+						<tr class="head">
+							<th>Project</th>
+							<th>Location</th>
+							<th>Year Completed</th>
+							<th>Role</th>
+						</tr>
+						<tr>
+							<th>Zippin Pippin</th>
+							<td>Bay Beach Amusement Park<br />Green Bay, WI</td>
+							<td>2020</td>
+							<td>Research</td>
+						</tr>
+						<tr class="even">
+							<th>Phantom's Revenge</th>
+							<td>Kennywood Park<br />West Mifflin, PA</td>
+							<td>2017</td>
+							<td>Research</td>
+						</tr>
+						<tr>
+							<th>Boulder Dash</th>
+							<td>Lake Compounce<br />Bristol, CT</td>
+							<td>2021</td>
+							<td>Documentation</td>
+						</tr>
+						<tr class="even">
+							<th>Thunderbolt</th>
+							<td>Kennywood Park<br />West Mifflin, PA</td>
+							<td>2021</td>
+							<td>Documentation, Onsite Work</td>
+						</tr>
+						<tr>
+							<th>Kingdom Coaster</th>
+							<td>Dutch Wonderland<br />Lancaster, PA</td>
+							<td>2021</td>
+							<td>Documentation</td>
+						</tr>
+						<tr class="even">
+							<th>Stunt Pilot</th>
+							<td>Silverwood Theme Park<br />Athol, ID</td>
+							<td>2021</td>
+							<td>Documentation</td>
+						</tr>
+						<tr>
+							<th>Mile High Falls</th>
+							<td>Kentucky Kingdom<br />Louisville, KY</td>
+							<td>2021</td>
+							<td>Documentation</td>
+						</tr>
+						<tr class="even">
+							<th>Jersey Devil Coaster</th>
+							<td>Six Flags Great Adventure<br />Jackson, NJ</td>
+							<td>2021</td>
+							<td>Research</td>
+						</tr>
+						<tr>
+							<th>Zadra</th>
+							<td>Energylandia<br />Poland</td>
+							<td>2019</td>
+							<td>Research</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<footer class="footer">
+			<!--Footer with social media links-->
+				<div>
+					 <p> © 2021 Donovan Gionis</p>
+					<div class="socialmedia"> 
+						<a href="https://www.linkedin.com/in/donovan-gionis-aa7b31170/" target="_blank">
+							<span class="LinkedIn"> <img class= "smlogo" src="img/104493_linkedin_icon.png"/></span>
+						</a> 
+						<a href="https://www.facebook.com/profile.php?id=100007619897689" target="_blank">
+							<span class="facebook"> <img class= "smlogo" src="img/f082.png"/></span>
+						</a> 
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

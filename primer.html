@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Primer - A Ride Control Systems Primer</title>
+		<style type="text/css">
+        /*Internal CSS: had trouble getting external to work*/
+		@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Berkshire+Swash&display=swap');
+			body {
+				/*Changed to something less eccentric*/
+				font-family: 'Roboto Slab', serif;
+				font-size: 90%;
+				color: #666;
+				/*Changed to resemble Phantom's Revenge coaster*/
+				background-color: #66ddaa;}
+			li {
+				list-style-image: url("images/icon-plus.png");
+				line-height: 1.6em;}
+			table {
+				border-spacing: 0px;}
+			th, td {
+				padding: 5px 30px 5px 10px;
+				border-spacing: 0px;
+				font-size: 90%;
+				margin: 0px;}
+			th, td {
+				text-align: left;
+				background-color: #e0e9f0;
+				border-top: 1px solid #f1f8fe;
+				border-bottom: 1px solid #cbd2d8;
+				border-right: 1px solid #cbd2d8;}
+			tr.head th {
+				color: #fff;
+				background-color: #90b4d6;
+				border-bottom: 2px solid #547ca0;
+				border-right: 1px solid #749abe;
+				border-top: 1px solid #90b4d6;
+				text-align: center;
+				text-shadow: -1px -1px 1px #666666;
+				letter-spacing: 0.15em;}
+			td {
+				text-shadow: 1px 1px 1px #ffffff;}
+			tr.even td, tr.even th {
+				background-color: #e8eff5;}
+			tr.head th:first-child {
+				-webkit-border-top-left-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				border-top-left-radius: 5px;}
+			tr.head th:last-child {
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topright: 5px;
+				border-top-right-radius: 5px;}
+			fieldset {
+				width: 310px;
+				margin-top: 0px;
+				margin-left: 15px;
+				border: 1px solid #d6d6d6;
+				background-color: #e3dac9;
+				line-height: 1.6em;}
+			legend {
+				font-style: italic;
+				color: #666666;}
+			input[type="text"] {
+				width: 120px;
+				border: 1px solid #d6d6d6;
+				padding: 2px;
+				outline: none;}
+			input[type="text"]:focus,
+			input[type="text"]:hover {
+				background-color: #d0e2f0;
+				border: 1px solid #999999;}
+			input[type="submit"] {
+				border: 1px solid #000000;
+				background-color: #9932cc;
+				color: #ffffff;
+				border-radius: 5px;
+				padding: 5px;
+				margin-top: 10px;}
+			input[type="submit"]:hover {
+				border: 1px solid #000000;
+				background-color: #66ddaa;
+				color: #ffffff;
+				cursor: pointer;}
+			.title {
+				float: left;
+				width: 160px;
+				clear: left;}
+			.submit {
+				width: 310px;
+				text-align: right;}
+			
+			#page {
+				max-width: 940px;
+				min-width: 720px;
+				margin: 10px auto 10px auto;
+				
+				border: 4px  #000;
+				background-color: #f6f4e8;
+				vertical-align: baseline;}
+			.center-mid-1{
+				width: 940px;
+				/*Changed to resemble Phantom's Revenge coaster*/
+				background-color: #9932cc;
+				padding-bottom: 15px;
+				padding-top: 5px;}
+
+			.center-mid-2{
+				width: 940px;
+				background-color: #efeae6;
+				padding-bottom: 15px;
+				padding-top: 5px;}
+
+			.center-mid-3{
+				width: 940px;
+				background-color: #e3dac9;
+				padding-bottom: 15px;
+				padding-top: 5px;
+                float: left;}
+			
+			.center-mid-3 > img{
+				float: left;
+				margin-top: 15px;
+                margin-left: 15px;
+				height: 250px;}
+
+            /*Section Headers in info text*/
+            .center-mid-3 > h2{
+                font-size: 200%; 
+                float: left;
+                margin-left: 15px;}
+
+            .center-mid-3 > p{
+                float: left;
+                clear: left;
+                margin-left: 15px;
+                margin-right: 15px;}
+            
+            .center-mid-3 > img.image-clear{
+                clear: left;}
+
+			.center-2{
+				width: 940px;
+				margin: auto;
+				padding-bottom: 15px;
+				padding-top: 5px;}
+
+			.img-1{
+				margin: auto;
+				width: 100%;}
+			.img-2{
+				margin: auto;
+				width: 30%;}
+			.center-text {
+				text-align: center;}
+			.center-2>h1, .center-2>p{
+				text-align: center;}
+			
+			h1.center-text {
+				/*Inherit body font family*/
+				/* Decreased h1 font size from 550%*/
+				font-size: 400%;
+				/*Changed to resemble Phantom's Revenge coaster*/
+				background-color: #9932cc;
+				/*Added white text color*/
+				color: #efeae6;}
+			
+			.header-main-menu {
+				float: right;
+				max-width: 80%;
+				position: fixed;
+				text-align: center;
+				height: 100%;
+				background-color: #ffffff;
+				right: -100%;
+				top: 0;
+				transition: right .3s ease;
+				width: 100%;
+				overflow: auto;
+				max-width: 100%;
+				z-index: 99;}     
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;}
+
+			ul li {
+				display: inline;
+				padding: 10px;
+				float: right;}
+
+   			ul li a, 
+   			ul a :hover, 
+		    ul li a:focus, 
+		    ul li a:active {
+				border: none;
+				text-decoration: none;
+				color: inherit;}
+
+			.footer {
+				text-align: center;}
+
+			.smlogo {
+				height: 30px;
+				width: 30px;
+				margin: auto;}
+
+		</style>
+		
+	</head>
+	<body>
+		<div id="page">
+			<div class="menu-holder">
+            <!--Navigation Menu-->
+                <nav id="header-main-menu">
+                    <ul class="main-menu ">
+                        <li>
+                            <a href="index.html"> Home </a>
+                        </li>
+                        <li>
+                            <!--Changed to link to schedule.html-->
+                            <a href="schedule.html"> Portfolio </a>
+                        </li>
+                        <li>
+                            <!--Informative Page-->
+                            <a href="primer.html"> Primer </a>
+                        </li>
+                        <li>
+                            <!--Changed to link to contact.html-->
+                            <a href="contact.html"> Contact </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <br/>
+
+            <!--Page Title-->
+            <h1 class= "center-text"> Engineering Primer </h1>
+        
+            <div class = "center-mid-3">
+            <!--Page Body-->
+                <h2>Peripheral Devices</h2>
+                <!--Images of lift motor, prox switch, brakes-->
+                <img src="img/phantomLift.jpg" class ="image-clear" alt="" title="">
+                <img src="img/phantomProx.jpg" alt="" title="">
+                <img src="img/phantomBrakes.jpg" alt="" title="">
+                <p>
+                    Along a ride's course and structure exists a network of sensors and actuators.  High-power AC or
+                    DC motors may be used to convey ride vehicles through controlled sections of track.  A prime
+                    example of this is the lift chain motor.  In modern systems, these motors are monitored and
+                    controlled by variable frequency drives.  Inductive proximity sensors detect metal components on
+                    ride vehicles, and they are positioned at crucial points in the track layout to allow for precise
+                    monitoring of train position and motion.  Pinch brakes and eddy current brakes are often found in 
+                    controlled sections of track, and they can be actuated open or closed using pneumatic pressure and 
+                    electrical control signals.
+                </p>
+                <h2>Operator Consoles</h2>
+                <!--Images of main op console and transfer panel-->
+                <img src="img/phantomConsole.jpg" class ="image-clear" alt="" title="">
+                <img src="img/GSConsole.jpg" alt="" title="">
+                <img src="img/GSXFER.jpg" alt="" title="">
+                <p>
+                    Although most modern ride control systems are largely automatic in their operation, operators need 
+                    to be present to provide forms of acknowedgement that allow the ride to function properly.  There
+                    is typically one main operator panel, as well as a collection of auxiliary panels for various
+                    enabling and maintenance functions.  These consoles typically contain buttons and switches that 
+                    allow operators to turn on control power, select an operation mode, stop/start the lift chain motor, 
+                    dispatch/advance ride vehicles from/to the station area, lock/unlock restraints, and open/close the 
+                    platform gates.  In modern systems, the main operator panel typically contains a touchscreen HMI 
+                    (Human-Machine Interface) that allows for convenient monitoring of the ride and the completion of 
+                    various specialty tasks.
+                </p>
+                <h2>Programmable Logic Controller (PLC)</h2>
+                <!--Images of PLC Rack, code-->
+                <img src="img/LRRack.jpg" class ="image-clear" alt="" title="">
+                <img src="img/SVCode.jpg" alt="" title="">
+                <p>
+                    At the core of all modern ride control systems is a programmable logic controller (PLC).  A PLC is 
+                    a ruggedized embedded computer typically used in industrial applications.  They tend to be of 
+                    modular construction, allowing for a rack-type system to be assembled from a power supply, processor, 
+                    network scanners, and input/output (I/O) modules.  Most of the peripheral devices discussed earlier 
+                    are wired into the system as inputs or outputs of these modules.  The processor runs a program
+                    written by the controls engineer in a graphical programming language known as 'ladder logic' due to a 
+                    close aesthetic resemblance to the rungs of a ladder.  In the amusement industry, it is quite standard 
+                    for control systems to utilize safety-rated hardware and software that features additional built-in 
+                    redundancy that standard equipment lacks.
+                </p>
+                <h2>Electrical Cabinetry</h2>
+                <!--Images of -->
+                <img src="img/cabinetJDC.jpg" class ="image-clear" alt="" title="">
+                <img src="img/remoteBox.jpg" alt="" title="">
+                <img src="img/LRCab.jpg" alt="" title="">
+                <p>
+                    A ride's PLC is typically mounted in a large metal cabinet among other electrical equipment.  Located
+                    inside a special electrical room, the cabinets also contain power supplies, I/O modules, variable 
+                    frequency drives for motors, a main power disconnect, and much more.  For some rides, it makes sense
+                    to distribute the I/O modules at locations out in the field.  Field devices are wired to these distributed 
+                    modules as discrete inputs or outputs, and then the data can be transmitted and received by the PLC processor
+                    in the main cabinet over Ethernet.  All field devices in the network meet at an Ethernet switch which 
+                    bridges communication between the those devices and the processor.
+                </p>
+            </div>
+
+            <footer class="footer">
+            <!--Footer with social media links-->
+                <div>
+                    <p> © 2021 Donovan Gionis</p>
+                    <div class="socialmedia"> 
+                        <a href="https://www.linkedin.com/in/donovan-gionis-aa7b31170/" target="_blank">
+                            <span class="LinkedIn"> <img class= "smlogo" src="img/104493_linkedin_icon.png"/></span>
+                        </a> 
+                        <a href="https://www.facebook.com/profile.php?id=100007619897689" target="_blank">
+                            <span class="facebook"> <img class= "smlogo" src="img/f082.png"/></span>
+                        </a> 
+                    </div>
+                </div>
+            </footer>
+		</div>
+	</body>
+</html>
